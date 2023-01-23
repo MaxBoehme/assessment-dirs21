@@ -8,7 +8,7 @@
 - insgesamt ca. 12h
     - Davon alleine 2h beim Einrichten der Grundstruktur und dem Update auf vue3 mit dazugehörigen Bibliotheken, was zu diversen Problemen geführt hat.
     - Da es kein Zeitlimit gab, habe ich den Schwerpunkt darauf gelegt, die möglichst gut wartbare und wiederverwendbare Komponenten zu schreiben.
-    - Es war - wie nie in der Softwareentwicklung - nicht einfach ohne nähere Rahmenbedingungen das genaue Maß zu finden, um 
+    - Es war - wie oft in der Softwareentwicklung - nicht einfach ohne nähere Rahmenbedingungen das genaue Maß zu finden, um 
       einseits meine Kenntnisse zu demonstrieren und andererseits kein overengineering zu betreiben. Desshalb habe ich an einem
       gewissen Punkt beschlossen - trotz mehrerer offener Punkte - die Arbeit vorerst abzuschließen.
 
@@ -28,9 +28,10 @@
 - Auslagern von Konstanten (wie zB. die Routen) in eigene Dateien
 - Tests
 - Sortierfunktionen in der Tabelle für jedes Feld customizen
+- Filter für die Tabelle, bzw. Suchfunktion
 - ErrorHandling ausbauen
 - Eventuell Erstell- und Änderungsdatum der dishes anzeigen. Spannender wäre hier allerdings eine Liste, welche alle Änderungen
   speichert und eine weitere, welche die Verkauszahlen zu bestimmten Zeitpunkten abbildet. Dann könnten Korrelationen zwischen
   den Daten eines Dishes und seines Umsatzes geschlossen werden.
-- Das Design anpassen/modernisieren
+- Das Design anpassen/modernisieren; eine Ansicht des fertigen Menüs anbieten
 - Browserkompatibilität der Styles testen und anpassen
