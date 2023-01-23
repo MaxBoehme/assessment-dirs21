@@ -1,5 +1,6 @@
 <script setup>
     import { ref, onMounted } from 'vue'
+    import { storeToRefs } from 'pinia'
     import { useDishesStore } from '@/stores/dishes.store'
     import CenterBox from '@/components/center-box.vue'
     import DishForm from '@/modules/menu-manager/dish-form.vue'
@@ -8,6 +9,8 @@
     import UnfoldBlock from '@/components/unfold-block.vue'
 
     const dishesStore = useDishesStore()
+
+    const { isLoadingDishes, dishesLoadError } = storeToRefs(dishesStore)
 
     const isNewDishFormOpen = ref(false)
     const newDishUpdater = ref(false)
@@ -58,7 +61,24 @@
                     />
                 </div>
             </div>
+            <div
+                v-if="isLoadingDishes || dishesLoadError"
+                class="dish-load-message"
+            >
+                <div v-if="dishesLoadError"
+                    class="load-error"
+                >
+                    could not load dishes<br/>
+                    <br/>
+                    {{ dishesLoadError }}
+                </div>
+                <div v-else
+                >
+                    is loading dishes...
+                </div>
+            </div>
             <DishesTable
+                v-else
                 class="dishes-table"
             />
         </CenterBox>
@@ -87,6 +107,19 @@
         
             .new-dish-button {
                 min-width: var(--action-button-m);
+            }
+        }
+
+        .dish-load-message {
+            width: 100%;
+            height: var(--mesage-box-height-m);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .load-error {
+                text-align: center;
+                color: var(--warn);
             }
         }
     }

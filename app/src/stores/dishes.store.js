@@ -20,6 +20,9 @@ const SERVER_MESSAGES = {
 export const useDishesStore = defineStore({
     id: 'dishes',
     state: () => ({
+        isLoadingDishes: false,
+        isDishesLoaded: false,
+        dishesLoadError: null,
         dishesIdList: [],
         dishes: {
             newDish: {
@@ -112,6 +115,8 @@ export const useDishesStore = defineStore({
     actions: {
         async loadDishes() {
             try {
+                this.dishesLoadError = null
+                this.isLoadingDishes = true
                 const data = await fetchWrapper.get('dishes')
                 this.dishesIdList = data.data.map(dish => dish._id)
                 data.data.forEach(dish => {
@@ -121,9 +126,13 @@ export const useDishesStore = defineStore({
                         original: dish
                     }
                 })
+                this.isLoadingDishes = false
+                this.isDishesLoaded = true
             }
             catch(error) {
-                console.log(error)
+                this.isLoadingDishes = false
+                this.dishesLoadError = error
+                throw error
             }
         },
         resetNewDish() {
