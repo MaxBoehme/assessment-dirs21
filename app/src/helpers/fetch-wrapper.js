@@ -6,10 +6,9 @@ const fetchWrapper = {
 }
 
 function request(method) {
-    return (url, body) => {
+    return (url, body, isJson = true) => {
         const requestOptions = {
-            method,
-            headers: authHeader(url)
+            method
         }
         let fetchOptions = {}
         if (body && isJson) {

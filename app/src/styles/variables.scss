@@ -1,0 +1,56 @@
+/* colors */
+:root {
+    --black: black;
+    --white: white;
+    --light-grey: lightgrey;
+    --shadow-grey: grey;
+    --primary: indigo;
+    --secondary: turquoise;
+    --warn: red;
+}
+
+/* sizes */
+:root {
+    --border-width-s: 2px;
+    --border-width-m: 4px;
+    --read-width-l: 800px;
+    --action-button-m: 120px;
+}
+
+/* spacing */
+:root {
+    --margin-xs: 4px;
+    --margin-s: 10px;
+    --margin-m: 24px;
+    --margin-l: 48px;
+    --margin-x: 72px;
+    --margin-xl: 200px;
+    --padding-xs: 4px;
+    --padding-s: 10px;
+    --padding-m: 24px;
+    --padding-l: 48px;
+    --padding-xl: 200px;
+}
+
+/* font */
+:root {
+    --font-size-s: 14px;
+    --font-size-m: 18px;
+    --font-size-ml: 24px;
+    --font-size-l: 30px;
+}
+
+/* z-indexes */
+:root {
+    --z-index-hint: 10;
+}
+
+/* opacities */
+:root {
+    --opacity-hidden: 0.8;
+}
+
+/* timings */
+:root {
+    --transition-delay: 400ms;
+}

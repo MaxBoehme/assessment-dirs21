@@ -1,0 +1,24 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	height: 100%;
+	width: 100%;
+    font-size: var(--font-size-m);
+}
+
+* {
+    position: relative;
+}
+
+.block-headline {
+    font-size: var(--font-size-l);
+}
+
+.bordered {
+    border: var(--border-width-s) solid var(--primary);
+}
+
+.clickable {
+    cursor: pointer;    
+}

@@ -1,0 +1,36 @@
+# Start
+
+- Durch ein Update auf neuere Bibliotheken, muss 'npm run serve' eventuell mehrfach aufgerufen werden.
+
+
+# Zeit
+
+- insgesamt ca. 12h
+    - Davon alleine 2h beim Einrichten der Grundstruktur und dem Update auf vue3 mit dazugehörigen Bibliotheken, was zu diversen Problemen geführt hat.
+    - Da es kein Zeitlimit gab, habe ich den Schwerpunkt darauf gelegt, die möglichst gut wartbare und wiederverwendbare Komponenten zu schreiben.
+    - Es war - wie nie in der Softwareentwicklung - nicht einfach ohne nähere Rahmenbedingungen das genaue Maß zu finden, um 
+      einseits meine Kenntnisse zu demonstrieren und andererseits kein overengineering zu betreiben. Desshalb habe ich an einem
+      gewissen Punkt beschlossen - trotz mehrerer offener Punkte - die Arbeit vorerst abzuschließen.
+
+
+# Architekturentscheidungen
+
+- Ich habe bewusst mich gegen das Einbinden von bestehenden Komponentenbibliotheken entschieden, da diese zwar oftmals erst zu schnellen
+  Ergebnissen führen, meistens aber weniger konfigurierbar sind und zudem ebenfalls bei Updates gewartet werden müssen.
+- Es gibt die Funktions des MultiEdits verschiedener dishes:
+    - Dies kann praktisch sein, da die Gastronomen oft ihre dishes preislich aufeinander abstimmen.
+- Nicht-Verwenden von axios: da die fetch-api weitestgehendst unterstütz wird. Bei Bedarf kann axios jedoch einfach in den fetchWrapper eingebunden werden.
+
+
+# open tasks
+
+- Beziehen aller Strings aus einer Übersetzungstabelle
+- Auslagern von Konstanten (wie zB. die Routen) in eigene Dateien
+- Tests
+- Sortierfunktionen in der Tabelle für jedes Feld customizen
+- ErrorHandling ausbauen
+- Eventuell Erstell- und Änderungsdatum der dishes anzeigen. Spannender wäre hier allerdings eine Liste, welche alle Änderungen
+  speichert und eine weitere, welche die Verkauszahlen zu bestimmten Zeitpunkten abbildet. Dann könnten Korrelationen zwischen
+  den Daten eines Dishes und seines Umsatzes geschlossen werden.
+- Das Design anpassen/modernisieren
+- Browserkompatibilität der Styles testen und anpassen
